@@ -11,14 +11,28 @@ Features
 - Loads each SVG exactly once, and caches them for repeated use
 - Can preload SVGs in advance using `InlineSVG.cache`
 
+Installation
+------------
+
+```
+$ npm i --save jacobmarshall-react-inline-svg
+```
+
 
 Usage
 -----
 
 Include the component:
 ```html
-<script src="/scripts/react-inline-svg.js"></script>
+<script src="https://unpkg.com/jacobmarshall-react-inline-svg@2.0/dist/react-inline-svg.js"></script>
 ```
+
+
+Or...
+```js
+import InlineSVG from 'jacobmarshall-react-inline-svg';
+```
+
 
 Render an inline SVG:
 
@@ -38,7 +52,7 @@ InlineSVG.cache.load("/path/to/your.svg");
 Building from Source
 --------------------
 
-The compiled/ready-to-use version of react-inline-svg can always be found at `dist/react-inline-svg.js`. To re-build this after making changes in `src`, simply run:
+To re-build this after making changes in `src`, simply run:
 
 ```
 $ gulp

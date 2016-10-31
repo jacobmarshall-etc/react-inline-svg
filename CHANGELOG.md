@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.0.1
+-----
+- `jacobmarshall-etc/react-inline-svg` is now available on npm as `jacobmarshall-react-inline-svg`.
+
 1.1.0
 -----
 - UMD support (thanks @jacobmarshall)

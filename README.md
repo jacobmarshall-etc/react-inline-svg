@@ -1,5 +1,5 @@
-react-inline-svg
-================
+jacobmarshall-react-inline-svg
+==============================
 
 React Component to load and inline SVG images, allowing you to target and style SVGs using CSS.
 

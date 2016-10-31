@@ -1,3 +1,10 @@
+/*!
+ * {{name}} v{{version}} (fork of loopj/react-inline-svg)
+ * {{description}}
+ * 
+ * Contributors: {{contributors}}
+ * License: {{license}}
+ */
 (function (factory) {
     if (typeof define === "function" && define.amd) {
         define(["react"], factory);

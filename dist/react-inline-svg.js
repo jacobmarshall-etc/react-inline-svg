@@ -1,1 +1,8 @@
+/*!
+ * jacobmarshall-react-inline-svg v1.1.0 (fork of loopj/react-inline-svg)
+ * React Component to load and inline SVG images, allowing you to target and style them using CSS
+ * 
+ * Contributors: James Smith <james@loopj.com>, Jacob Marshall <git@jacobmarshall.co>
+ * License: MIT
+ */
 !function(t){"function"==typeof define&&define.amd?define(["react"],t):"undefined"!=typeof module&&module.exports?module.exports=t(require("react")):window.InlineSVG=t(window.React)}(function(t){function n(t,n){var e=new XMLHttpRequest;e.addEventListener("readystatechange",function(){4===e.readyState&&n(200===e.status,e.responseText)},!1),e.open("GET",t,!0),e.send()}function e(t,n){function e(){this.constructor=t}e.prototype=n.prototype,t.prototype=new e}function o(n){t.Component.call(this,n),this.state={loading:!0,content:null}}e(o,t.Component),o.propTypes={src:t.PropTypes.string.isRequired},o.prototype.componentDidMount=o.prototype.componentWillReceiveProps=function(t){this.load(t?t.src:this.props.src)},o.prototype.load=function(t){var n=this;o.cache.load(t,function(t){n.setState({loading:!1,content:t})})},o.prototype.render=function(){return t.createElement("span",{className:"InlineSVG"+(this.state.loading?" InlineSVG--loading":"")+(this.props.className?" "+this.props.className:""),dangerouslySetInnerHTML:{__html:this.state.content}})};var a=o.cache={};return o.cache.load=function(t,e){var o=a[t];o?e&&(o.loading?o.callbacks.push(e):e(o.content)):(o=a[t]={url:t,loading:!0,content:null,callbacks:[]},e&&o.callbacks.push(e),n(t,function(t,n){for(o.content=n,o.loading=!1;o.callbacks.length;)o.callbacks.shift()(n)}))},o});

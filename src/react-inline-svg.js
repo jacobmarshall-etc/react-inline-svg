@@ -27,10 +27,6 @@ function InlineSVG(props) {
 
 extend(InlineSVG, React.Component);
 
-InlineSVG.propTypes = {
-  src: React.PropTypes.string.isRequired,
-};
-
 InlineSVG.prototype.componentDidMount =
 InlineSVG.prototype.componentWillReceiveProps = function(props) {
   this.load(props ? props.src : this.props.src);

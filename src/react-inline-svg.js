@@ -32,9 +32,15 @@ InlineSVG.prototype.componentWillReceiveProps = function(props) {
   this.load(props ? props.src : this.props.src);
 };
 
+InlineSVG.prototype.componentWillUnmount = function() {
+  if (this.cancel) {
+    this.cancel();
+  }
+};
+
 InlineSVG.prototype.load = function(src) {
   var that = this;
-  InlineSVG.cache.load(src, function(item) {
+  this.cancel = InlineSVG.cache.load(src, function(item) {
     that.setState({
       loading: false,
       content: item
@@ -79,4 +85,11 @@ InlineSVG.cache.load = function(url, callback) {
       callback(item.content);
     }
   }
+  var cancelled = false;
+  return function cancel() {
+    if (!cancelled) {
+      item.callbacks.splice(item.callbacks.indexOf(callback), 1);
+      cancelled = true;
+    }
+  };
 };

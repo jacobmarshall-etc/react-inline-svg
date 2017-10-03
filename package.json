@@ -1,6 +1,6 @@
 {
   "name": "jacobmarshall-react-inline-svg",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "React Component to load and inline SVG images, allowing you to target and style them using CSS",
   "main": "dist/react-inline-svg.js",
   "files": [

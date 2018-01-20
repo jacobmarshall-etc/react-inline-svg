@@ -49,6 +49,8 @@ function InlineSVG(props) {
   };
 }
 
+InlineSVG.displayName = 'InlineSVG';
+
 extend(InlineSVG, React.Component);
 
 InlineSVG.prototype.componentDidMount =

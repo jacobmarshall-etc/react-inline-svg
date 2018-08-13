@@ -5,13 +5,18 @@
   "author": "Jacob Marshall <git@jacobmarshall.co>",
   "main": "lib/react-inline-svg.js",
   "types": "types/react-inline-svg.d.ts",
+  "files": [
+    "lib",
+    "types"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jmshal/react-inline-svg"
   },
   "scripts": {
     "start": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "*"
@@ -26,5 +31,8 @@
     "rollup-plugin-uglify": "^4.0.0",
     "typescript": "^3.0.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

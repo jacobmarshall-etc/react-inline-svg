@@ -1,59 +1,35 @@
-jacobmarshall-react-inline-svg
-==============================
+# @jmshal/react-inline-svg
 
-React Component to load and inline SVG images, allowing you to target and style SVGs using CSS.
+A simple and lightweight React component for loading SVG files so they can be styled with CSS.
 
+## Installation
 
-Features
---------
-- Easy to use, just add `InlineSVG` components
-- Loads SVGs automatically using a `XMLHttpRequest`
-- Loads each SVG exactly once, and caches them for repeated use
-- Can preload SVGs in advance using `InlineSVG.cache`
-
-Installation
-------------
-
-```
-$ npm i --save jacobmarshall-react-inline-svg
+```sh
+$ npm install --save @jmshal/react-inline-svg
 ```
 
+## Basic usage
 
-Usage
------
-
-Include the component:
-```html
-<script src="https://unpkg.com/jacobmarshall-react-inline-svg@2.0/dist/react-inline-svg.js"></script>
-```
-
-
-Or...
 ```js
-import InlineSVG from 'jacobmarshall-react-inline-svg';
+import { InlineSVG } from '@jmshal/react-inline-svg';
+
+// ...
+
+<InlineSVG
+  src={require('./path/to/icon.svg')}
+  className={css.Example}
+/>
 ```
 
+## Preloading
 
-Render an inline SVG:
+```js
+import { preload } from '@jmshal/react-inline-svg';
 
-```xml
-<InlineSVG src="/path/to/your.svg" className="css-class" />
+preload(require('./path/to/icon.svg'))
+  .then(() => console.log('icon.svg has been preloaded'));
 ```
 
+## License
 
-Pre-loading SVGs
-----------------
-
-```javascript
-InlineSVG.cache.load("/path/to/your.svg");
-```
-
-
-Building from Source
---------------------
-
-To re-build this after making changes in `src`, simply run:
-
-```
-$ gulp
-```
+MIT ❤️

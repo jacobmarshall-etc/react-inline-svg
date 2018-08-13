@@ -26,7 +26,7 @@ import { InlineSVG } from '@jmshal/react-inline-svg';
 ```js
 import { preload } from '@jmshal/react-inline-svg';
 
-preload(require('./path/to/icon.svg'))
+preload('./path/to/icon.svg')
   .then(() => console.log('icon.svg has been preloaded'));
 ```
 

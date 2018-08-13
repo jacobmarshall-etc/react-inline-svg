@@ -10,7 +10,7 @@ $ npm install --save @jmshal/react-inline-svg
 
 ## Basic usage
 
-```js
+```jsx
 import { InlineSVG } from '@jmshal/react-inline-svg';
 
 // ...

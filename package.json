@@ -1,6 +1,6 @@
 {
   "name": "@jmshal/react-inline-svg",
-  "version": "3.0.1",
+  "version": "4.0.0-rc.1",
   "description": "A simple and lightweight React component for loading SVG files so they can be styled with CSS.",
   "author": "Jacob Marshall <git@jacobmarshall.co>",
   "main": "lib/react-inline-svg.js",
